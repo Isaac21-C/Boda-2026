@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda | Alex & Rosy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        .font-cursive { font-family: 'Great Vibes', cursive; }
+        .font-sans { font-family: 'Montserrat', sans-serif; }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="font-sans bg-stone-50 text-stone-800">
+
+    <section class="parallax h-screen flex items-center justify-center relative" 
+             style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=2070');">
+        <div class="text-center text-white" data-aos="fade-down" data-aos-duration="1500">
+            <h1 class="font-cursive text-7xl md:text-9xl mb-4 text-amber-200">Alex & Rosy</h1>
+            <p class="text-xl md:text-2xl tracking-[0.3em] uppercase">¡Nuestro XXV aniversario matrimonial!</p>
+            <div class="mt-8 animate-bounce">
+                <span class="text-3xl">↓</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-6 flex justify-center">
+        <div class="max-w-2xl bg-white p-10 rounded-2xl shadow-sm border border-stone-100 text-center" data-aos="fade-up">
+            <span class="text-amber-600 text-4xl mb-4 block italic">“</span>
+            <p class="text-lg italic text-stone-600 leading-relaxed">
+                "De manera que ya no son dos, sino una carne. Así que, lo que Dios unió no lo separe el hombre"
+            </p>
+            <p class="mt-4 font-semibold uppercase text-sm tracking-widest">Marcos 10: 8,9 </p>
+            <p class="mt-4">Hace 25 años Dios unió nuestras vidas, y por su infinito amor, tomamos la decisión de amarnos para siempre, y el señor nos ha concedido celebrar nuestras Bodas de Plata.</p>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div class="rounded-2xl overflow-hidden shadow-2xl" data-aos="fade-right">
+            <img src="Casados.jpg" alt="Salón de eventos" class="w-full h-80 object-cover">
+        </div>
+        <div class="space-y-6" data-aos="fade-left">
+            <h2 class="text-4xl font-cursive text-amber-700">La celebración religiosa</h2>
+            <p class="text-stone-600">Se llevará a cabo en el Valle de la Misericordia a las 4:00 pm. Agradecemos tu presencia.</p>
+            <a href="https://maps.app.goo.gl/T9CSgonZWdEuQZrE6" target="_blank" class="inline-block bg-amber-700 text-white px-8 py-3 rounded-full hover:bg-amber-800 transition duration-300 shadow-md">
+                Ubicación
+            </a>
+        </div>
+        <div class="space-y-6" data-aos="fade-left">
+            <h2 class="text-4xl font-cursive text-amber-700">El casino</h2>
+            <p class="text-stone-600">Te esperamos en el Salón "Hacienda Los Pinos" a partir de las 6:00 pm para la fiesta.</p>
+            <a href="https://maps.app.goo.gl/AU4DvAKzM4h7BKTn7" target="_blank" class="inline-block bg-amber-700 text-white px-8 py-3 rounded-full hover:bg-amber-800 transition duration-300 shadow-md">
+                Ubicación del casino 
+            </a>
+        </div>
+    </section>
+
+    <section class="bg-stone-200 py-20 text-center px-6">
+        <div data-aos="zoom-in">
+            <h3 class="text-3xl mb-6 font-semibold uppercase tracking-widest text-stone-700">¿Nos acompañas?</h3>
+            
+            <div id="info-pases" class="mb-10 p-8 bg-white rounded-2xl shadow-sm inline-block border border-stone-100">
+                <p class="text-stone-500 italic mb-2">Hola,</p>
+                <h4 id="nombre-invitado" class="text-2xl font-bold text-stone-800 mb-4 tracking-tight">Invitado</h4>
+                <div class="h-[1px] w-12 bg-amber-200 mx-auto mb-4"></div>
+                <p class="text-stone-600 font-sans">Hemos reservado para ti:</p>
+                <p class="text-4xl font-bold text-amber-700 mt-2 font-sans"><span id="num-pases">0</span> pases</p>
+            </div>
+
+            <br>
+            
+            <button onclick="enviarWhatsApp()" class="bg-green-600 text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-green-700 transition shadow-lg inline-flex items-center gap-2">
+                Confirmo mi asistencia
+            </button>
+        </div>
+    </section>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="datos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Detección automática de invitado por URL
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        const invitado = listaInvitados[id];
+
+        if (invitado) {
+            document.getElementById('nombre-invitado').innerText = invitado.responsable;
+            document.getElementById('num-pases').innerText = invitado.cantidad;
+        }
+
+        function enviarWhatsApp() {
+            const telefono = "523313965382";
+            let mensaje = "Hola! Confirmo mi asistencia";
+            
+            if (invitado) {
+                mensaje += ` para la invitación de *${invitado.responsable}*. Estaremos presentes los ${invitado.cantidad} invitados confirmados.`;
+            }
+            
+            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media print { .no-print { display: none; } }
+        .ticket-card { border-left: 10px solid #b45309; page-break-inside: avoid; }
+    </style>
+</head>
+<body class="bg-stone-100 p-4">
+
+    <div class="max-w-xl mx-auto">
+        <header class="text-center mb-8 no-print">
+            <h1 class="text-2xl font-bold text-stone-800">Tus Pases de Acceso</h1>
+            <p class="text-stone-500">Cada invitado debe presentar su código individual</p>
+            <button onclick="window.print()" class="mt-4 bg-amber-700 text-white px-6 py-2 rounded-full font-bold shadow-lg">
+                Descargar PDF / Imprimir
+            </button>
+        </header>
+
+        <div id="contenedorBoletos" class="space-y-6">
+            </div>
+    </div>
+
+    <script src="datos.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        const info = listaInvitados[id];
+
+        if(info) {
+            const contenedor = document.getElementById('contenedorBoletos');
+
+            for (let i = 1; i <= info.cantidad; i++) {
+                const idUnico = `${id}-P${i}`; // Ejemplo: F001-P1
+                
+                const ticket = document.createElement('div');
+                ticket.className = "bg-white p-6 rounded-lg shadow-md flex items-center justify-between ticket-card border border-stone-200";
+                
+                ticket.innerHTML = `
+                    <div>
+                        <p class="text-[10px] uppercase text-amber-700 font-bold">Pase Individual</p>
+                        <h2 class="text-lg font-bold text-stone-800">${info.responsable}</h2>
+                        <p class="text-sm text-stone-500 italic">Invitado ${i} de ${info.cantidad}</p>
+                        <div class="mt-2 text-[10px] text-stone-400 font-mono">
+                            Mesa: ${info.mesa} | ID: ${idUnico}
+                        </div>
+                    </div>
+                    <div id="qr-${idUnico}" class="p-1 bg-white border"></div>
+                `;
+                
+                contenedor.appendChild(ticket);
+
+                // Generar el QR único para este pase
+                new QRCode(document.getElementById(`qr-${idUnico}`), {
+                    text: `BODA-ALEX-ROSY|${idUnico}`,
+                    width: 100,
+                    height: 100
+                });
+            }
+        } else {
+            document.body.innerHTML = "<h1 class='text-center mt-20'>Invitación no encontrada</h1>";
+        }
+    </script>
+</body>
+</html>
