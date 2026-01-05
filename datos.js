@@ -73,7 +73,9 @@ const listaInvitados = {
     "F072": { "responsable": "Sr. José", "cantidad": 3 },
     "F073": { "responsable": "Omar Davila Y familia", "cantidad": 5},
     "F074": { "responsable": "Omar Davila Y familia", "cantidad": 5},
-    "F075": { "responsable": "Omar Davila Y familia", "cantidad": 5}
-    
+    "9997": { "responsable": "Prueba", "cantidad": 5},
+    "9998": { "responsable": "prueba", "cantidad": 5},
+    "9999": { "responsable": "Prueba", "cantidad": 5}
 };
+
 
