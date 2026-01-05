@@ -23,15 +23,17 @@
 </head>
 <body class="font-body bg-[#fdfcfb] text-[#333]">
 
-    <section class="parallax h-screen flex items-end justify-center pb-12 relative"  
-         style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('contentos.jpg');">
+    <section class="parallax h-screen flex items-end justify-center pb-12 relative" 
+        style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('contentos.jpg');">
         <div class="text-center text-white px-4" data-aos="fade-down" data-aos-duration="2000">
-           <h1 class="font-cursive text-7xl md:text-9xl relative pt-6 mb-4 text-amber-100">Alex y Rosy</h1>
+            <h1 class="font-cursive text-7xl md:text-9xl relative pt-6 mb-4 text-amber-100">Alex y Rosy</h1>
             <div class="h-[1px] w-24 bg-amber-100 mx-auto my-6"></div>
             <p class="font-title text-sm md:text-xl tracking-[0.4em] uppercase">¡Agradecidos con Dios, Nos complace invitarles a nuestro XXV aniversario matrimonial!</p>
             <p class="font-title text-lg pt-10 md:text-xl tracking-[0.4em] uppercase">21 de Febrero del 2026</p>
+            
             <div class="mt-12 animate-bounce opacity-70">
-                <span class="text-2xl font-light">↓</span>
+                <p class="font-title text-[10px] tracking-[0.2em] uppercase mb-2">Desliza hacia abajo</p>
+                <span class="text-2xl font-light text-amber-100">↓</span>
             </div>
         </div>
     </section>
@@ -39,7 +41,7 @@
     <section class="py-24 px-6">
         <div class="max-w-3xl mx-auto bg-white p-12 text-center shadow-sm border border-stone-100" data-aos="fade-up">
             <span class="gold-accent text-4xl mb-6 block font-title">“</span>
-            <p class="text-34 italic text-stone-600 leading-relaxed font-light mb-6">
+            <p class="text-lg italic text-stone-600 leading-relaxed font-light mb-6">
                 "De manera que ya no son dos, sino una carne. Así que, lo que Dios unió no lo separe el hombre"
             </p>
             <p class="font-title gold-accent text-sm tracking-widest uppercase mb-8">Marcos 10: 8,9</p>
@@ -166,7 +168,7 @@
                 window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, '_blank');
                 location.reload();
             } else {
-                mensaje = `Hola. Lamentablemente no podremos asistir al aniversario.`;
+                mensaje = `Hola. Lamentablemente *${invitado.responsable}* no podrá asistir al aniversario.`;
                 window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, '_blank');
                 window.location.href = "gracias.html";
             }
@@ -174,9 +176,6 @@
     </script>
 </body>
 </html>
-
-
-
 
 
 
