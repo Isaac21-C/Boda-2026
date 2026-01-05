@@ -75,7 +75,13 @@ const listaInvitados = {
     "F074": { "responsable": "Omar Davila Y familia", "cantidad": 5},
     "9997": { "responsable": "Prueba", "cantidad": 5},
     "9998": { "responsable": "prueba", "cantidad": 5},
-    "9999": { "responsable": "Prueba", "cantidad": 5}
+    "9999": { "responsable": "Prueba", "cantidad": 5},
+    "10000": { "responsable": "Prueba", "cantidad": 5},
+    "10001": { "responsable": "prueba", "cantidad": 5},
+    "10002": { "responsable": "Prueba", "cantidad": 5}"9997": { "responsable": "Prueba", "cantidad": 5},
+    "10003": { "responsable": "prueba", "cantidad": 5},
+    "10004": { "responsable": "Prueba", "cantidad": 5}
 };
+
 
 
