@@ -33,7 +33,7 @@
             
             <div class="mt-12 animate-bounce opacity-70">
                 <p class="font-title text-[10px] tracking-[0.2em] uppercase mb-2">Desliza hacia arriba</p>
-                <span class="text-2xl font-light text-amber-100">↓</span>
+                <span class="text-2xl font-light text-amber-100">↑</span>
             </div>
         </div>
     </section>
@@ -80,7 +80,7 @@
                     Se llevará a cabo en el Valle de la Misericordia casa de oración, ubicado en la calle Av de Jesus #954, San Pedro Tlaquepaque Jalisco a las 4:00 pm.
                 </p>
                 <a href="https://maps.app.goo.gl/T9CSgonZWdEuQZrE6" target="_blank" class="inline-block bg-[#c5a059] text-white px-10 py-4 text-xs tracking-[0.2em] uppercase font-bold hover:bg-[#b38f4d] transition duration-300 shadow-lg transform hover:-translate-y-1">
-                    Ver en el mapa
+                    Haz click para ver el mapa
                 </a>
             </div>
 
@@ -90,7 +90,7 @@
                     Te esperamos en el Salón "Hacienda Los Pinos" ubicado en la calle San Jorge #2737, San Pedro Tlaquepaque Jalisco a partir de las 6:00 pm.
                 </p>
                 <a href="https://maps.app.goo.gl/AU4DvAKzM4h7BKTn7" target="_blank" class="inline-block bg-[#c5a059] text-white px-10 py-4 text-xs tracking-[0.2em] uppercase font-bold hover:bg-[#b38f4d] transition duration-300 shadow-lg transform hover:-translate-y-1">
-                    Ver en el mapa
+                    Haz click para ver el mapa
                 </a>
             </div>
         </div>
@@ -108,12 +108,12 @@
                     <p class="text-stone-500 font-light text-sm mb-2">Hemos reservado para ti:</p>
                     <p class="font-title text-6xl gold-accent mb-3"><span id="num-pases">0</span></p>
                     <p class="text-stone-500 font-light text-sm mb-2">Lugares</p>
-                    <p class="text-[15px] text-red-400 italic mb-10 leading-relaxed uppercase tracking-wider">Niños de de 6 años en adelante cuentan como aulto para efecto de los lugares</p>
-                    <p class="text-[13px] text-pink-700 italic mb-10 leading-relaxed uppercase tracking-wider">¡Se tiene un orden de numero de invitados y de mesas, al ingreso al salón se te indicará tu mesa asignada, favor de respetar ese orden!</p>
+                    <p class="text-[15px] text-blue-400 font-bold italic mb-10 leading-relaxed uppercase tracking-wider">Niños de 6 años en adelante cuentan como adulto</p>
+                    <p class="text-[13px] text-pink-700 font-bold italic mb-10 leading-relaxed uppercase tracking-wider">¡Se tiene un listado de invitados y de mesas, al ingreso al salón se te indicará tu mesa asignada.!</p>
                     
                     <div id="botones-accion" class="flex flex-col gap-4">
                         <button onclick="procesarRespuesta('asistir')" class="bg-[#333] text-white py-5 px-8 font-title text-lg tracking-[0.2em] uppercase hover:bg-black transition shadow-md">
-                            Confirmar Asistencia
+                            Asistiré
                         </button>
                         <button onclick="procesarRespuesta('rechazar')" class="bg-red-700 text-white py-4 px-8 font-title text-[12px] tracking-widest uppercase hover:bg-red-800 transition shadow-md">
                             No podré asistir
@@ -177,6 +177,39 @@
         }
     </script>
 </body>
+<footer class="py-20 bg-[#fdfcfb] text-center px-6">
+    <div class="max-w-2xl mx-auto border-t border-stone-100 pt-16">
+        
+        <div class="mb-12 relative inline-block" data-aos="zoom-in">
+            <div class="absolute -top-6 -right-6 gold-accent opacity-40">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12,2C15.31,2 18,4.66 18,7.95C18,12.41 12,19 12,19C12,19 6,12.41 6,7.95C6,4.66 8.69,2 12,2M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6Z" opacity=".3"/>
+                    <path d="M19,15C19,15 17,17 15,17C13,17 13,15 11,15C9,15 9,17 7,17C5,17 5,15 3,15" fill="none" stroke="currentColor" stroke-width="1"/>
+                </svg>
+            </div>
+            
+            <div class="bg-white p-3 shadow-2xl rotate-2 border border-stone-100">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000&auto=format&fit=crop" 
+                     alt="Bodas de Plata" 
+                     class="w-48 h-64 md:w-64 md:h-80 object-cover">
+                <p class="font-cursive text-xl mt-4 text-stone-400">Nuestra historia continúa...</p>
+            </div>
+        </div>
+
+        <p class="font-cursive text-4xl gold-accent mb-6" data-aos="fade-up">Gracias por compartir con nosotros este maravilloso momento</p>
+        
+        <div class="h-[1px] w-16 bg-stone-200 mx-auto mb-8"></div>
+        
+        <p class="font-title text-[10px] tracking-[0.6em] uppercase text-stone-400 mb-10">
+            Alex & Rosy • Bodas de Plata
+        </p>
+
+        <a href="#" class="inline-block animate-bounce text-stone-300 hover:text-[#c5a059] transition-colors duration-300">
+            <span class="block text-xs font-title tracking-widest uppercase mb-2">Subir</span>
+            <span class="text-3xl font-light">↑</span>
+        </a>
+    </div>
+</footer>
 </html>
 
 
