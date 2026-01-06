@@ -84,8 +84,10 @@ const listaInvitados = {
     "F083": { "responsable": "Padre Juan Manuel", "cantidad": 2},
     "F084": { "responsable": "Padre Elias", "cantidad": 2},
     "F085": { "responsable": "Sra. Rosy", "cantidad": 4},
-    "9999": { "responsable": "Prueba", "cantidad": 4}
+    "9999": { "responsable": "Prueba", "cantidad": 4},
+    "1111": { "responsable": "Prueba", "cantidad": 2}
 };
+
 
 
 
