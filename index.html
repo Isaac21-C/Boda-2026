@@ -78,7 +78,7 @@
                 <p class="text-stone-500 font-light leading-relaxed mb-6">
                     Se llevará a cabo en el Valle de la Misericordia casa de oración, ubicado en la calle Av. de Jesus #954, San Pedro Tlaquepaque Jalisco a las 4:00 pm.
                 </p>
-                <a href="https://maps.app.goo.gl/vWshz8P1C4j2k9eW7" target="_blank" class="inline-block bg-[#c5a059] text-white px-10 py-4 text-xs tracking-[0.2em] uppercase font-bold hover:bg-[#b38f4d] transition duration-300 shadow-lg transform hover:-translate-y-1">
+                <a href="https://maps.app.goo.gl/T9CSgonZWdEuQZrE6" target="_blank" class="inline-block bg-[#c5a059] text-white px-10 py-4 text-xs tracking-[0.2em] uppercase font-bold hover:bg-[#b38f4d] transition duration-300 shadow-lg transform hover:-translate-y-1">
                     Haz click para ver el mapa
                 </a>
             </div>
@@ -88,7 +88,7 @@
                 <p class="text-stone-500 font-light leading-relaxed mb-6">
                     Te esperamos en el Salón "Hacienda Los Pinos" ubicado en la calle San Jorge #2737, San Pedro Tlaquepaque Jalisco a partir de las 6:00 pm.
                 </p>
-                <a href="https://maps.app.goo.gl/3QWj9vD8vP8Xz6G7" target="_blank" class="inline-block bg-[#c5a059] text-white px-10 py-4 text-xs tracking-[0.2em] uppercase font-bold hover:bg-[#b38f4d] transition duration-300 shadow-lg transform hover:-translate-y-1">
+                <a href="https://maps.app.goo.gl/AU4DvAKzM4h7BKTn7" target="_blank" class="inline-block bg-[#c5a059] text-white px-10 py-4 text-xs tracking-[0.2em] uppercase font-bold hover:bg-[#b38f4d] transition duration-300 shadow-lg transform hover:-translate-y-1">
                     Haz click para ver el mapa
                 </a>
             </div>
@@ -129,29 +129,10 @@
 
     <footer class="py-20 bg-[#fdfcfb] text-center px-6">
         <div class="max-w-2xl mx-auto border-t border-stone-100 pt-16">
-            <div class="mb-12 relative inline-block" data-aos="zoom-in">
-                <div class="absolute -top-6 -right-6 gold-accent opacity-40">
-                    <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12,2C15.31,2 18,4.66 18,7.95C18,12.41 12,19 12,19C12,19 6,12.41 6,7.95C6,4.66 8.69,2 12,2M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6Z" opacity=".3"/>
-                        <path d="M19,15C19,15 17,17 15,17C13,17 13,15 11,15C9,15 9,17 7,17C5,17 5,15 3,15" fill="none" stroke="currentColor" stroke-width="1"/>
-                    </svg>
-                </div>
-                <div class="bg-white p-3 shadow-2xl rotate-2 border border-stone-100">
-                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000&auto=format&fit=crop" 
-                         alt="Bodas de Plata" 
-                         class="w-48 h-64 md:w-64 md:h-80 object-cover">
-                    <p class="font-cursive text-xl mt-4 text-stone-400">Nuestra historia continúa...</p>
-                </div>
-            </div>
             <p class="font-cursive text-4xl gold-accent mb-6" data-aos="fade-up">Gracias por compartir con nosotros este maravilloso momento</p>
-            <div class="h-[1px] w-16 bg-stone-200 mx-auto mb-8"></div>
             <p class="font-title text-[10px] tracking-[0.6em] uppercase text-stone-400 mb-10">
                 Alex & Rosy • Bodas de Plata
             </p>
-            <a href="#" class="inline-block animate-bounce text-stone-300 hover:text-[#c5a059] transition-colors duration-300">
-                <span class="block text-xs font-title tracking-widest uppercase mb-2">Subir</span>
-                <span class="text-3xl font-light">↑</span>
-            </a>
         </div>
     </footer>
 
@@ -161,6 +142,7 @@
         AOS.init({ duration: 1200, once: true });
 
         const telefono = "523330201835";
+        const urlExcel = "https://script.google.com/macros/s/AKfycbzELN2cp4Z0XTr7h23qr5tGYFOAsS0wEkPv7x9695M0QlZUq3rCqRm0ndb_K3V3IWCc/exec";
         const params = new URLSearchParams(window.location.search);
         const id = params.get('id');
         const invitado = typeof listaInvitados !== 'undefined' ? listaInvitados[id] : null;
@@ -187,39 +169,49 @@
             document.getElementById('nombre-invitado').innerText = invitado.responsable;
             document.getElementById('num-pases').innerText = invitado.cantidad;
             verificarHistorial();
-        } else if (id) {
-            document.getElementById('nombre-invitado').innerText = "Invitado Especial";
         }
 
-        function procesarRespuesta(tipo) {
-            if (!invitado) return alert("Por favor accede desde tu enlace personalizado.");
+        async function procesarRespuesta(tipo) {
+            if (!invitado) return alert("Enlace no válido.");
             
             const btnA = document.getElementById('btn-asistir');
             const btnR = document.getElementById('btn-rechazar');
             
-            // Guardar localmente
+            btnA.disabled = true;
+            btnR.disabled = true;
+            if(tipo === 'asistir') btnA.innerText = "REGISTRANDO...";
+            else btnR.innerText = "REGISTRANDO...";
+
             localStorage.setItem('confirm_boda_' + id, tipo);
 
-            let mensaje = "";
-            if (tipo === 'asistir') {
-                btnA.innerText = "ABRIENDO WHATSAPP...";
-                mensaje = `¡Hola! Confirmo mi asistencia para la invitación de *${invitado.responsable}*. Estaremos presentes los ${invitado.cantidad} invitados confirmados.`;
-            } else {
-                btnR.innerText = "ENVIANDO...";
-                mensaje = `Hola. Lamentablemente *${invitado.responsable}* no podrá asistir al aniversario.`;
-            }
+            const datos = {
+                id: id,
+                nombre: invitado.responsable,
+                asistencia: tipo === 'asistir' ? "SÍ" : "NO",
+                cantidad: invitado.cantidad
+            };
 
-            // Redirección directa (mejor que window.open para evitar bloqueos)
+            // Enviar a Google Sheets
+            try {
+                await fetch(urlExcel, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: JSON.stringify(datos)
+                });
+            } catch (e) { console.log("Error Sheets"); }
+
+            // Abrir WhatsApp
+            const mensaje = tipo === 'asistir' 
+                ? `¡Hola! Confirmo mi asistencia para la invitación de *${invitado.responsable}*. Estaremos presentes los ${invitado.cantidad} invitados.`
+                : `Hola. Lamentablemente *${invitado.responsable}* no podrá asistir al aniversario.`;
+
             setTimeout(() => {
                 window.location.href = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-            }, 400);
+            }, 500);
         }
     </script>
 </body>
 </html>
-
-
-
 
 
 
