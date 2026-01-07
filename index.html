@@ -1,11 +1,9 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Te invitamos a nuestro 25 aniversario Alex y Rosy</title>
+    <title>Te invitamos a nuestro 25 aniversario Alex y Rosy. Da click en el link</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -13,7 +11,11 @@
         .font-title { font-family: 'Cinzel', serif; }
         .font-body { font-family: 'Montserrat', sans-serif; }
         .font-cursive { font-family: 'Dancing Script', cursive; }
-        .parallax { background-attachment: fixed; background-position: center; background-size: cover; }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
         .gold-accent { color: #c5a059; }
         .bg-gold { background-color: #c5a059; }
         .border-gold { border-color: #c5a059; }
@@ -28,6 +30,7 @@
             <div class="h-[1px] w-24 bg-amber-100 mx-auto my-6"></div>
             <p class="font-title text-sm md:text-xl tracking-[0.4em] uppercase">¡Agradecidos con Dios, Nos complace invitarles a nuestro XXV aniversario matrimonial!</p>
             <p class="font-title text-lg pt-10 md:text-xl tracking-[0.4em] uppercase">21 de Febrero del 2026</p>
+            
             <div class="mt-12 animate-bounce opacity-70">
                 <p class="font-title text-[10px] tracking-[0.2em] uppercase mb-2">Desliza hacia arriba</p>
                 <span class="text-2xl font-light text-amber-100">↑</span>
@@ -53,7 +56,9 @@
         <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
             <h2 class="font-title text-3xl gold-accent mb-12 tracking-widest uppercase">Nuestros Padrinos de Velación</h2>
             <div class="max-w-md mx-auto bg-white p-4 shadow-md border border-stone-100 rounded-sm">
-                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2070&auto=format&fit=crop" alt="Padrinos" class="w-full h-80 object-cover mb-6">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2070&auto=format&fit=crop" 
+                     alt="Padrinos" 
+                     class="w-full h-80 object-cover mb-6">
                 <p class="font-title text-xl text-stone-700 tracking-wide uppercase">Francisco Ibarra Preciado </p>
                 <p class="font-title text-xl text-stone-700 tracking-wide uppercase">y</p>
                 <p class="font-title text-xl text-stone-700 tracking-wide uppercase">Maria de los Angeles Moreno Arreguin</p>
@@ -66,16 +71,26 @@
         <div class="rounded-full overflow-hidden shadow-xl" data-aos="zoom-in">
             <img src="altar.jpg" alt="Alex y Rosy" class="w-full object-cover">
         </div>
+
         <div class="space-y-16">
             <div data-aos="fade-left">
                 <h2 class="font-title text-2xl gold-accent mb-4 tracking-wider uppercase">La celebración religiosa</h2>
-                <p class="text-stone-500 font-light leading-relaxed mb-6">Valle de la Misericordia casa de oración, Av. de Jesus #954, Tlaquepaque Jal. a las 4:00 pm.</p>
-                <a href="https://maps.google.com" target="_blank" class="inline-block bg-[#c5a059] text-white px-10 py-4 text-xs tracking-[0.2em] uppercase font-bold hover:bg-[#b38f4d] shadow-lg transform hover:-translate-y-1">Ver mapa</a>
+                <p class="text-stone-500 font-light leading-relaxed mb-6">
+                    Se llevará a cabo en el Valle de la Misericordia casa de oración, ubicado en la calle Av. de Jesus #954, San Pedro Tlaquepaque Jalisco a las 4:00 pm.
+                </p>
+                <a href="https://maps.google.com/?q=Valle+de+La+Misericordia+Casa+De+Oracion+Av+de+Jesús+954+Tlaquepaque" target="_blank" class="inline-block bg-[#c5a059] text-white px-10 py-4 text-xs tracking-[0.2em] uppercase font-bold hover:bg-[#b38f4d] transition duration-300 shadow-lg transform hover:-translate-y-1">
+                    Haz click para ver el mapa
+                </a>
             </div>
+
             <div data-aos="fade-left" data-aos-delay="200">
                 <h2 class="font-title text-2xl gold-accent mb-4 tracking-wider uppercase">El salón de eventos</h2>
-                <p class="text-stone-500 font-light leading-relaxed mb-6">Hacienda Los Pinos, calle San Jorge #2737, Tlaquepaque Jal. a partir de las 6:00 pm.</p>
-                <a href="https://maps.google.com" target="_blank" class="inline-block bg-[#c5a059] text-white px-10 py-4 text-xs tracking-[0.2em] uppercase font-bold hover:bg-[#b38f4d] shadow-lg transform hover:-translate-y-1">Ver mapa</a>
+                <p class="text-stone-500 font-light leading-relaxed mb-6">
+                    Te esperamos en el Salón "Hacienda Los Pinos" ubicado en la calle San Jorge #2737, San Pedro Tlaquepaque Jalisco a partir de las 6:00 pm.
+                </p>
+                <a href="https://maps.google.com/?q=Hacienda+los+pinos+San+Jorge+2737+Tlaquepaque" target="_blank" class="inline-block bg-[#c5a059] text-white px-10 py-4 text-xs tracking-[0.2em] uppercase font-bold hover:bg-[#b38f4d] transition duration-300 shadow-lg transform hover:-translate-y-1">
+                    Haz click para ver el mapa
+                </a>
             </div>
         </div>
     </section>
@@ -83,22 +98,32 @@
     <section class="bg-[#f4f1ee] py-32 text-center px-6">
         <div class="max-w-xl mx-auto" data-aos="zoom-in">
             <h3 class="font-title text-2xl mb-12 tracking-[0.3em] uppercase text-stone-700">Confirma tu asistencia</h3>
+            
             <div id="card-rsvp" class="bg-white p-10 md:p-16 shadow-lg border-t-4 border-gold">
                 <p class="text-stone-400 italic mb-2 font-light">Hola,</p>
                 <h4 id="nombre-invitado" class="font-title text-3xl mb-8 tracking-tighter text-stone-800">Invitado</h4>
+                
                 <div id="contenedor-estado">
                     <p class="text-stone-500 font-light text-sm mb-2">Hemos reservado para ti:</p>
                     <p class="font-title text-6xl gold-accent mb-3"><span id="num-pases">0</span></p>
-                    <p class="text-stone-500 font-light text-sm mb-6 uppercase tracking-widest text-[10px]">Lugares</p>
+                    <p class="text-stone-500 font-light text-sm mb-2">Lugares</p>
+                    <p class="text-[13px] text-blue-400 font-bold italic mb-10 leading-relaxed uppercase tracking-wider">Niños de 6 años en adelante cuentan para un lugar</p>
+                    <p class="text-[13px] text-pink-700 font-bold italic mb-10 leading-relaxed uppercase tracking-wider">¡Al ingreso al salón se le indicará la mesa que le fue asignada conforme al numeró de invitados.!</p>
                     
                     <div id="botones-accion" class="flex flex-col gap-4">
-                        <button id="btn-asistir" onclick="procesarRespuesta('asistir')" class="bg-[#333] text-white py-5 px-8 font-title text-lg tracking-[0.2em] uppercase hover:bg-black shadow-md">Asistiré</button>
-                        <button id="btn-rechazar" onclick="procesarRespuesta('rechazar')" class="bg-red-700 text-white py-4 px-8 font-title text-[12px] tracking-widest uppercase hover:bg-red-800 shadow-md">No podré asistir</button>
+                        <button id="btn-asistir" onclick="procesarRespuesta('asistir')" class="bg-[#333] text-white py-5 px-8 font-title text-lg tracking-[0.2em] uppercase hover:bg-black transition shadow-md">
+                            Asistiré
+                        </button>
+                        <button id="btn-rechazar" onclick="procesarRespuesta('rechazar')" class="bg-red-700 text-white py-4 px-8 font-title text-[12px] tracking-widest uppercase hover:bg-red-800 transition shadow-md">
+                            No podré asistir
+                        </button>
                     </div>
 
-                    <p id="aviso-wa" class="mt-8 text-[11px] text-red-600 font-bold uppercase tracking-widest">⚠️ Es indispensable ENVIAR EL MENSAJE de WhatsApp al finalizar.</p>
+                    <p id="aviso-wa" class="mt-8 text-[11px] text-red-600 font-bold uppercase tracking-widest leading-relaxed">
+                        ⚠️ Al dar click, se abrirá tu WhatsApp.<br>Es indispensable ENVIAR EL MENSAJE para completar tu confirmación.
+                    </p>
 
-                    <div id="zona-reconfirmar" class="hidden mt-6 pt-6 border-t border-stone-100">
+                    <div id="zona-reconfirmar" class="hidden mt-6 pt-6 border-t border-stone-100 text-center">
                         <p class="text-stone-400 text-[10px] uppercase tracking-widest mb-4">¿Deseas actualizar tu respuesta?</p>
                         <button onclick="habilitarEdicion()" class="text-[#c5a059] font-bold text-xs underline uppercase tracking-widest">Hacer nueva confirmación</button>
                     </div>
@@ -107,12 +132,35 @@
         </div>
     </section>
 
-    <footer class="py-16 text-center text-stone-300 font-title text-[10px] tracking-[0.6em] uppercase">Alex & Rosy • Bodas de Plata</footer>
+    <footer class="py-20 bg-[#fdfcfb] text-center px-6">
+        <div class="max-w-2xl mx-auto border-t border-stone-100 pt-16">
+            <div class="mb-12 relative inline-block" data-aos="zoom-in">
+                <div class="bg-white p-3 shadow-2xl rotate-2 border border-stone-100">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000&auto=format&fit=crop" 
+                         alt="Bodas de Plata" 
+                         class="w-48 h-64 md:w-64 md:h-80 object-cover">
+                    <p class="font-cursive text-xl mt-4 text-stone-400">Nuestra historia continúa...</p>
+                </div>
+            </div>
+
+            <p class="font-cursive text-4xl gold-accent mb-6" data-aos="fade-up">Gracias por compartir con nosotros este maravilloso momento</p>
+            <div class="h-[1px] w-16 bg-stone-200 mx-auto mb-8"></div>
+            <p class="font-title text-[10px] tracking-[0.6em] uppercase text-stone-400 mb-10">
+                Alex & Rosy • Bodas de Plata
+            </p>
+
+            <a href="#" class="inline-block animate-bounce text-stone-300 hover:text-[#c5a059] transition-colors duration-300">
+                <span class="block text-xs font-title tracking-widest uppercase mb-2">Subir</span>
+                <span class="text-3xl font-light">↑</span>
+            </a>
+        </div>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="datos.js"></script>
     <script>
         AOS.init({ duration: 1200, once: true });
+
         const telefono = "523330201835";
         const urlExcel = "https://script.google.com/macros/s/AKfycbzELN2cp4Z0XTr7h23qr5tGYFOAsS0wEkPv7x9695M0QlZUq3rCqRm0ndb_K3V3IWCc/exec";
         const params = new URLSearchParams(window.location.search);
@@ -138,16 +186,30 @@
         }
 
         async function procesarRespuesta(tipo) {
-            if (!invitado) return alert("Enlace no válido.");
-            document.getElementById('btn-asistir').disabled = true;
-            document.getElementById('btn-rechazar').disabled = true;
+            if (!invitado) return alert("Acceso no válido.");
+            
+            const btnA = document.getElementById('btn-asistir');
+            const btnR = document.getElementById('btn-rechazar');
+            btnA.disabled = true; btnR.disabled = true;
+            btnA.innerText = tipo === 'asistir' ? "REGISTRANDO..." : "Asistiré";
+
             localStorage.setItem('confirm_boda_' + id, tipo);
 
             const datos = { id: id, nombre: invitado.responsable, asistencia: tipo === 'asistir' ? "SÍ" : "NO", cantidad: invitado.cantidad };
-            try { await fetch(urlExcel, { method: 'POST', mode: 'no-cors', body: JSON.stringify(datos) }); } catch (e) {}
+            
+            try { 
+                await fetch(urlExcel, { method: 'POST', mode: 'no-cors', body: JSON.stringify(datos) }); 
+            } catch (e) {
+                console.log("Error al registrar en Excel");
+            }
 
-            const mensaje = tipo === 'asistir' ? `¡Hola! Confirmo mi asistencia para la invitación de *${invitado.responsable}*.` : `Hola. *${invitado.responsable}* no podrá asistir.`;
-            setTimeout(() => { window.location.href = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`; }, 400);
+            const mensaje = tipo === 'asistir' 
+                ? `¡Hola! Confirmo mi asistencia para la invitación de *${invitado.responsable}*. Estaremos presentes los ${invitado.cantidad} invitados.`
+                : `Hola. Lamentablemente *${invitado.responsable}* no podrá asistir al aniversario.`;
+
+            setTimeout(() => { 
+                window.location.href = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`; 
+            }, 500);
         }
     </script>
 </body>
