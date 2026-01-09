@@ -79,7 +79,7 @@ const listaInvitados = {
     "F078": { "responsable": "Fray Manolo", "cantidad": 1},
     "F079": { "responsable": "Fray Jacobo", "cantidad": 1},
     "F080": { "responsable": "Fray Mireles", "cantidad": 1},
-    "F081": { "responsable": "Don Javier", "cantidad": 3},
+    "F081": { "responsable": "Don Javier", "cantidad": 4},
     "F082": { "responsable": "Gaby Goche", "cantidad": 2},
     "F083": { "responsable": "Padre Juan Manuel", "cantidad": 2},
     "F084": { "responsable": "Padre Elias", "cantidad": 2},
@@ -87,6 +87,7 @@ const listaInvitados = {
     "9999": { "responsable": "Prueba", "cantidad": 4},
     "1111": { "responsable": "Prueba", "cantidad": 2}
 };
+
 
 
 
