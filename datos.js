@@ -76,17 +76,24 @@ const listaInvitados = {
     "F075": { "responsable": "Luis roberto Y Silvina", "cantidad": 2},
     "F076": { "responsable": "Herminia", "cantidad": 1},
     "F077": { "responsable": "Carmen Becerra", "cantidad": 1},
-    "F078": { "responsable": "Fray Manolo", "cantidad": 1},
-    "F079": { "responsable": "Fray Jacobo", "cantidad": 1},
+    "F078": { "responsable": "Fray Manolo", "cantidad": 2},
+    "F079": { "responsable": "Fray Jacobo", "cantidad": 2},
     "F080": { "responsable": "Fray Mireles", "cantidad": 1},
     "F081": { "responsable": "Don Javier", "cantidad": 4},
     "F082": { "responsable": "Gaby Goche", "cantidad": 2},
     "F083": { "responsable": "Padre Juan Manuel", "cantidad": 2},
     "F084": { "responsable": "Padre Elias", "cantidad": 2},
     "F085": { "responsable": "Sra. Rosy", "cantidad": 4},
-    "9999": { "responsable": "Prueba", "cantidad": 4},
+    "F086": { "responsable": "Mtra. Alma", "cantidad": 2},
+    "F087": { "responsable": "Mtro. Pedro", "cantidad": 2},
+    "F088": { "responsable": "Dra. Gaby", "cantidad": 2},
+    "F089": { "responsable": "Dra. Coco", "cantidad": 4},
+    "F090": { "responsable": "Blanca", "cantidad": 2},
+    "F091": { "responsable": "Semi Isaias", "cantidad": 2},
+    "F092": { "responsable": "Zoila", "cantidad": 2},
     "1111": { "responsable": "Prueba", "cantidad": 2}
 };
+
 
 
 
