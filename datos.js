@@ -39,7 +39,7 @@ const listaInvitados = {
     "F038": { "responsable": "Xochilt", "cantidad": 2 },
     "F039": { "responsable": "Graciela Rodríguez y familia", "cantidad": 4 },
     "F040": { "responsable": "Maestro Sergio", "cantidad": 1 },
-    "F041": { "responsable": "Maestro Rubén", "cantidad": 1 },
+    "F041": { "responsable": "Maestro Rubén", "cantidad": 2 },
     "F042": { "responsable": "Maestro Alexis", "cantidad": 1 },
     "F043": { "responsable": "Maestro Daniel", "cantidad": 2 },
     "F044": { "responsable": "Omar Castillo y familia", "cantidad": 3 },
@@ -93,6 +93,7 @@ const listaInvitados = {
     "F092": { "responsable": "Zoila", "cantidad": 2},
     "1111": { "responsable": "Prueba", "cantidad": 2}
 };
+
 
 
 
