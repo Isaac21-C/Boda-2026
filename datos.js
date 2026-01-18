@@ -23,7 +23,7 @@ const listaInvitados = {
     "F022": { "responsable": "Gabriela Martinez y familia", "cantidad": 4 },
     "F023": { "responsable": "Laura Cristina Martinez", "cantidad": 2 },
     "F024": { "responsable": "Edgar Zarate Martinez y familia", "cantidad": 3 },
-    "F025": { "responsable": "Daniel Antonio Martinez", "cantidad": 5 },
+    "F025": { "responsable": "Daniel Antonio Martinez", "cantidad": 4 },
     "F026": { "responsable": "Rafael Beltrán Martinez", "cantidad": 2 },
     "F027": { "responsable": "Adrian Beltrán Martinez", "cantidad": 2 },
     "F028": { "responsable": "Antonio Beltrán Martinez", "cantidad": 2 },
@@ -43,7 +43,7 @@ const listaInvitados = {
     "F042": { "responsable": "Maestro Alexis", "cantidad": 1 },
     "F043": { "responsable": "Maestro Daniel", "cantidad": 2 },
     "F044": { "responsable": "Omar Castillo y familia", "cantidad": 3 },
-    "F045": { "responsable": "Saúl Zepeda", "cantidad": 3 },
+    "F045": { "responsable": "Saúl Zepeda", "cantidad": 4 },
     "F046": { "responsable": "Maestro Agustín y familia", "cantidad": 3 },
     "F047": { "responsable": "Karina y familia", "cantidad": 4 },
     "F048": { "responsable": "Gerardo y familia", "cantidad": 5 },
@@ -91,8 +91,16 @@ const listaInvitados = {
     "F090": { "responsable": "Blanca", "cantidad": 2},
     "F091": { "responsable": "Semi Isaias", "cantidad": 2},
     "F092": { "responsable": "Zoila", "cantidad": 2},
+    "F093": { "responsable": "Mtro Frank", "cantidad": 2},
+    "F094": { "responsable": "Mtro Ivan", "cantidad": 2},
+    "F095": { "responsable": "Mtra Alejandra", "cantidad": 2},
+    "F096": { "responsable": "Teacher Grace", "cantidad": 2},
+    "F097": { "responsable": "Mtro Erick", "cantidad": 2},
+    "F098": { "responsable": "Mtro Fabian", "cantidad": 2},
+    "F099": { "responsable": "Sub Isidro", "cantidad": 2},
     "1111": { "responsable": "Prueba", "cantidad": 2}
 };
+
 
 
 
