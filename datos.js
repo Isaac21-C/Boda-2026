@@ -104,13 +104,14 @@ const listaInvitados = {
     "F103": { "responsable": "Vero y Marco", "cantidad": 2},
     "F104": { "responsable": "Mony Psicologa", "cantidad": 2},
     "F105": { "responsable": "Gaby Cerda", "cantidad": 2},
-    "F106": { "responsable": "Adriana", "cantidad": 2},
+    "F106": { "responsable": "Adriana", "cantidad": 3},
     "F107": { "responsable": "Patty Valle", "cantidad": 2},
     "F108": { "responsable": "Esther", "cantidad": 2},
     "F109": { "responsable": "Padre Elias", "cantidad": 2},
     "F110": { "responsable": "Mtro. Rey", "cantidad": 2},
     "1111": { "responsable": "Prueba", "cantidad": 2}
 };
+
 
 
 
