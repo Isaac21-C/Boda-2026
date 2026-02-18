@@ -112,8 +112,10 @@ const listaInvitados = {
     "F111": { "responsable": "Padre Ernesto", "cantidad": 2},
     "F112": { "responsable": "Padre Max", "cantidad": 1},
     "F113": { "responsable": "Manuel y Ana", "cantidad": 5},
+    "F114": { "responsable": "Araceli y familia", "cantidad": 3},
     "1111": { "responsable": "Prueba", "cantidad": 2}
 };
+
 
 
 
